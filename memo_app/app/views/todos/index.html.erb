@@ -7,3 +7,43 @@
     <%= render @todos %>
   </ul>
 </div>
+
+<div class="modal-overlay"></div>
+
+<div class="decryption">
+  <div class ="decryption__text">
+    暗号とキーを入力してください
+  </div>
+  <%= form_for @todo, html: { class: 'decryption__form' } do |f|%>
+    <%= f.text_field :content, class: 'decryption__form__text', :placeholder => "暗号を入力"%>
+    <%= f.text_field :content, class: 'decryption__form__num', :placeholder => "キーを入力"%>
+  <% end %>
+  <div class="decryption__btn">
+    <div class="decryption__btn__yes">
+      <a href ="" class="modal-btn">解読する</a>
+    </div>
+    <div class="decryption__btn__no">
+      <a href ="" class="modal-btn">閉じる</a>
+    </div>
+  </div>
+</div>
+
+<div class="encryption">
+  <div class ="encryption__text">
+    <p>テキストとキーを入力してください</p>
+    <p>(キーは大切に保管してください)</p>
+  </div>
+  <%= form_for @todo, html: { class: 'encryption__form' } do |f|%>
+    <%= f.text_field :content, class: 'encryption__form__text', :placeholder => "テキストを入力"%>
+    <%= f.text_field :content, class: 'encryption__form__num', :placeholder => "キーを入力"%>
+  <% end %>
+  <div class="encryption__btn">
+    <div class="encryption__btn__yes">
+      <a href ="" class="modal-btn">実行する</a>
+    </div>
+    <div class="encryption__btn__no">
+      <a href ="" class="modal-btn">閉じる</a>
+    </div>
+  </div>
+</div>
+

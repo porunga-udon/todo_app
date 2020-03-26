@@ -1,0 +1,2 @@
+module Todos::SearchesHelper
+end
